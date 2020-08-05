@@ -1,6 +1,13 @@
 name: Actions Workflow
 
 on:
+  # schedule:
+  # Run each 5 minutes
+  # - cron: "0/5 * * * *"
+
+  # Add trigger from url
+  repository_dispatch:
+    types: [build]
   push:
   pull_request:
     types: [closed, assigned, opened, reopened]
