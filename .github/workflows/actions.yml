@@ -9,6 +9,9 @@ on:
   repository_dispatch:
     types: [build]
   push:
+    branches:
+      - master
+      - "feature/*"
   pull_request:
     types: [closed, assigned, opened, reopened]
 
